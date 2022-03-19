@@ -1,6 +1,7 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:velocityx/assets/custom_icons_icons.dart';
+import 'package:velocityx/shared/TaskTile.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -20,6 +21,11 @@ class _HomeState extends State<Home> {
     ];
     return Container(
         child: Scaffold(
+      body: Column(
+        children: [
+          TaskTile()
+        ],
+      ),
       backgroundColor: Color.fromRGBO(36, 36, 36, 1.0),
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(36, 36, 36, 1.0),
@@ -53,6 +59,7 @@ class _HomeState extends State<Home> {
                   IconButton(onPressed: () {}, icon: Icon(CustomIcons.bell))),
         ],
       ),
+
       floatingActionButton: FloatingActionButton(
         backgroundColor: Color.fromRGBO(71, 132, 241, 1.0),
         child: Icon(
