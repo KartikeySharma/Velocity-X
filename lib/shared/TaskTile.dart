@@ -31,14 +31,14 @@ class TaskTile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Assigned by: $assigned_by',
+                  task_name,
                   style: TextStyle(
                     color: Colors.white
                   ),
                 ),
                 SizedBox(height: 3,),
                 Text(
-                  assigned_by,
+                  'Assigned by: $assigned_by',
                   style: TextStyle(
                       color: Color(0xFFA2B9E4)
                   ),

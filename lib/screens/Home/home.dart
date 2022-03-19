@@ -2,6 +2,7 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:flutter/material.dart';
 import 'package:velocityx/assets/custom_icons_icons.dart';
 import 'package:velocityx/shared/TaskTile.dart';
+import 'package:velocityx/shared/category_tile.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -25,6 +26,7 @@ class _HomeState extends State<Home> {
             body: Column(
               children: [
                 TaskTile(task_name: 'Task One' ,assigned_by:'John Doe',due_date:'23/10'),
+                CategoryTile(title: 'Urgent Submission',)
               ],
             ),
             backgroundColor: Color.fromRGBO(36, 36, 36, 1.0),
