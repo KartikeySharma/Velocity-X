@@ -3,7 +3,10 @@ import 'package:flutter/cupertino.dart';
 
 
 class TaskTile extends StatelessWidget {
-  const TaskTile({Key? key}) : super(key: key);
+
+  final String task_name, assigned_by, due_date;
+
+  TaskTile({required this.task_name, required this.assigned_by, required this.due_date});
 
   @override
   Widget build(BuildContext context) {
@@ -28,14 +31,14 @@ class TaskTile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Task One",
+                  'Assigned by: $assigned_by',
                   style: TextStyle(
                     color: Colors.white
                   ),
                 ),
                 SizedBox(height: 3,),
                 Text(
-                  "Assigned by: John Doe",
+                  assigned_by,
                   style: TextStyle(
                       color: Color(0xFFA2B9E4)
                   ),
@@ -48,7 +51,7 @@ class TaskTile extends StatelessWidget {
               children: [
                 SizedBox(height: 18,),
                 Text(
-                  "Due by: dd/mm",
+                  'Due by: $due_date',
                   style: TextStyle(
                       color: Color(0xFFA2B9E4)
                   ),

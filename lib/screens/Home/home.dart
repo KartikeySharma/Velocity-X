@@ -23,7 +23,7 @@ class _HomeState extends State<Home> {
         child: Scaffold(
       body: Column(
         children: [
-          TaskTile()
+          TaskTile(task_name: 'Task One' ,assigned_by:'John Doe',due_date:'23/10'),
         ],
       ),
       backgroundColor: Color.fromRGBO(36, 36, 36, 1.0),
