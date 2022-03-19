@@ -1,6 +1,7 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:velocityx/assets/custom_icons_icons.dart';
+import 'package:velocityx/shared/TaskTile.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -19,7 +20,13 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Container(
+
         child: Scaffold(
+            body: Column(
+              children: [
+                TaskTile(task_name: 'Task One' ,assigned_by:'John Doe',due_date:'23/10'),
+              ],
+            ),
             backgroundColor: Color.fromRGBO(36, 36, 36, 1.0),
             appBar: AppBar(
               backgroundColor: Color.fromRGBO(36, 36, 36, 1.0),
