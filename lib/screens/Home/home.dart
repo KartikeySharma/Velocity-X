@@ -66,12 +66,12 @@ class _HomeState extends State<Home> {
               },
             ),
             floatingActionButtonLocation:
-            FloatingActionButtonLocation.centerDocked,
+                FloatingActionButtonLocation.centerDocked,
             // bottomNavigationBar: BottomNavBar(),
             bottomNavigationBar: AnimatedBottomNavigationBar.builder(
               tabBuilder: (int index, bool isActive) {
                 final color =
-                isActive && !_floatingActive ? Colors.white : Colors.black;
+                    isActive && !_floatingActive ? Colors.white : Colors.black;
                 return Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
