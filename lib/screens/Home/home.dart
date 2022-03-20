@@ -44,7 +44,9 @@ class _HomeState extends State<Home> {
                           ),
                         ]),
                     child: IconButton(
-                        onPressed: () {}, icon: Icon(CustomIcons.search_1))),
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/MetaData');
+                        }, icon: Icon(CustomIcons.search_1))),
                 Container(
                     margin: EdgeInsets.only(right: 15.0),
                     decoration: const BoxDecoration(

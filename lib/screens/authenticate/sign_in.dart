@@ -48,7 +48,9 @@ class SignIn extends StatelessWidget {
                 height: 23,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/home');
+                },
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(12, 12, 15, 12),
                   child: Row(
