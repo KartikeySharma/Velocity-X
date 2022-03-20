@@ -29,6 +29,12 @@ class Profile extends StatelessWidget {
               
               
               ),
+                Icon(
+      Icons.favorite,
+      color: Colors.pink,
+      size: 24.0,
+      semanticLabel: 'Text to announce in accessibility modes',
+    ),
               SizedBox(
                 height: 15,
               ),
