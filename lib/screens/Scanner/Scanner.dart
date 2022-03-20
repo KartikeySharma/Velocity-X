@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:velocityx/screens/Home/HomeComponents/BottomNavBar.dart';
+import 'package:qr_flutter/qr_flutter.dart';
+import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+import 'package:velocityx/assets/custom_icons_icons.dart';
+import 'package:velocityx/screens/Scanner/qr_scan_page.dart';
 
-import '../../assets/custom_icons_icons.dart';
+import '../Home/HomeComponents/BottomNavBar.dart';
 import '../Home/HomeComponents/FloatingButton.dart';
 
 class Scanner extends StatefulWidget {
@@ -60,7 +63,9 @@ class _ScannerState extends State<Scanner> {
                       ),
                     ]),
                   child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>ScanQRCode()));
+                    },
                     icon: Icon(Icons.supervised_user_circle),
                     color: Colors.blue,
               ),
