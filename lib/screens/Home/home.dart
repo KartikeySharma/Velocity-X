@@ -59,7 +59,9 @@ class _HomeState extends State<Home> {
                           ),
                         ]),
                     child: IconButton(
-                        onPressed: () {}, icon: Icon(CustomIcons.bell))),
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/FileInformation');
+                        }, icon: Icon(CustomIcons.bell))),
               ],
             ),
             body: SingleChildScrollView(

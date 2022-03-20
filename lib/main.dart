@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:velocityx/screens/FileInformation/file_information.dart';
 import 'package:velocityx/screens/Home/home.dart';
 import 'package:velocityx/screens/authenticate/sign_in.dart';
 import 'package:velocityx/screens/metadata/meta_data.dart';
@@ -10,10 +11,12 @@ void main() {
     initialRoute: '/SignIn',
 
     routes: {
+
       '/wrapper':(context) => Wrapper(),
       '/SignIn':(context) => SignIn(),
       '/home':(context) => Home(),
       '/MetaData':(context) => MetaDataPage(),
+      '/FileInformation': (context) => FileInformation(),
     },
 
   ));
