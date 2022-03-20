@@ -16,8 +16,7 @@ void main() async {
   );
   runApp(MyApp());
   // runApp(MaterialApp(
-  //   initialRoute: '/SignIn',
-
+  //   initialRoute: '/SignIn',s
   //   routes: {
   //     '/wrapper':(context) => Wrapper(),
   //     '/SignIn':(context) => SignIn(),
@@ -35,6 +34,7 @@ class MyApp extends StatelessWidget {
       initialData: null,
       value: AuthService().user,
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: Wrapper(),
       ),
     );

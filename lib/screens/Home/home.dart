@@ -1,8 +1,11 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:velocityx/assets/custom_icons_icons.dart';
+import 'package:velocityx/screens/FileInformation/file_information.dart';
 import 'package:velocityx/screens/Home/HomeComponents/BottomNavBar.dart';
 import 'package:velocityx/screens/Home/HomeComponents/FloatingButton.dart';
+import 'package:velocityx/screens/Scanner/Scanner.dart';
+import 'package:velocityx/screens/metadata/meta_data.dart';
 import 'package:velocityx/shared/TaskTile.dart';
 import 'package:velocityx/shared/category_tile.dart';
 
@@ -46,7 +49,8 @@ class _HomeState extends State<Home> {
                     child: IconButton(
                         onPressed: () {
                           Navigator.pushNamed(context, '/MetaData');
-                        }, icon: Icon(CustomIcons.search_1))),
+                        },
+                        icon: Icon(CustomIcons.search_1))),
                 Container(
                     margin: EdgeInsets.only(right: 15.0),
                     decoration: const BoxDecoration(
@@ -60,99 +64,12 @@ class _HomeState extends State<Home> {
                         ]),
                     child: IconButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, '/FileInformation');
-                        }, icon: Icon(CustomIcons.bell))),
+                          Navigator.pushNamed(context, '/FileInfo');
+                        },
+                        icon: Icon(CustomIcons.bell))),
               ],
             ),
-            body: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: CategoryTile(
-                            title: 'Urgent Submission',
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: CategoryTile(
-                            title: 'Urgent Submission',
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: CategoryTile(
-                            title: 'Urgent Submission',
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: CategoryTile(
-                            title: 'Urgent Submission',
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: CategoryTile(
-                            title: 'Urgent Submission',
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 20.0),
-                  Text(
-                    "Today's task",
-                    style: TextStyle(color: Colors.white, fontSize: 24),
-                    textAlign: TextAlign.start,
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Column(
-                    children: [
-                      TaskTile(
-                          task_name: "task_name",
-                          assigned_by: "assigned_by",
-                          due_date: "due_date"),
-                      TaskTile(
-                          task_name: "task_name",
-                          assigned_by: "assigned_by",
-                          due_date: "due_date"),
-                      TaskTile(
-                          task_name: "task_name",
-                          assigned_by: "assigned_by",
-                          due_date: "due_date"),
-                      TaskTile(
-                          task_name: "task_name",
-                          assigned_by: "assigned_by",
-                          due_date: "due_date"),
-                      TaskTile(
-                          task_name: "task_name",
-                          assigned_by: "assigned_by",
-                          due_date: "due_date"),
-                      TaskTile(
-                          task_name: "task_name",
-                          assigned_by: "assigned_by",
-                          due_date: "due_date"),
-                      TaskTile(
-                          task_name: "task_name",
-                          assigned_by: "assigned_by",
-                          due_date: "due_date"),
-                      TaskTile(
-                          task_name: "task_name",
-                          assigned_by: "assigned_by",
-                          due_date: "due_date"),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+            body: _HomePage(),
             floatingActionButton: FloatingButton(
               floatingActive: floatingActive,
             ),
@@ -162,5 +79,105 @@ class _HomeState extends State<Home> {
               bottomNavIndex: bottomNavIndex,
               floatingActive: floatingActive,
             )));
+  }
+}
+
+class _HomePage extends StatelessWidget {
+  const _HomePage({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CategoryTile(
+                    title: 'Urgent Submission',
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CategoryTile(
+                    title: 'Urgent Submission',
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CategoryTile(
+                    title: 'Urgent Submission',
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CategoryTile(
+                    title: 'Urgent Submission',
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CategoryTile(
+                    title: 'Urgent Submission',
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 20.0),
+          Text(
+            "Today's task",
+            style: TextStyle(color: Colors.white, fontSize: 24),
+            textAlign: TextAlign.start,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Column(
+            children: [
+              TaskTile(
+                task_name: "task_name",
+                assigned_by: "assigned_by",
+                due_date: "due_date",
+              ),
+              TaskTile(
+                  task_name: "task_name",
+                  assigned_by: "assigned_by",
+                  due_date: "due_date"),
+              TaskTile(
+                  task_name: "task_name",
+                  assigned_by: "assigned_by",
+                  due_date: "due_date"),
+              TaskTile(
+                  task_name: "task_name",
+                  assigned_by: "assigned_by",
+                  due_date: "due_date"),
+              TaskTile(
+                  task_name: "task_name",
+                  assigned_by: "assigned_by",
+                  due_date: "due_date"),
+              TaskTile(
+                  task_name: "task_name",
+                  assigned_by: "assigned_by",
+                  due_date: "due_date"),
+              TaskTile(
+                  task_name: "task_name",
+                  assigned_by: "assigned_by",
+                  due_date: "due_date"),
+              TaskTile(
+                  task_name: "task_name",
+                  assigned_by: "assigned_by",
+                  due_date: "due_date"),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }
