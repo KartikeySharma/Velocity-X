@@ -24,28 +24,28 @@ class Profile extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                height: 140.0,
-                width: 340.0,
-              ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.account_circle_sharp,
-                      color: Color.fromARGB(255, 235, 171, 192),
-                      size: 70.0,
-                      semanticLabel: 'Text to announce in accessibility modes',
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    Text(
-                      'Demo_user',
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                    ),
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(12, 12, 15, 12),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.account_circle_sharp,
+                        color: Colors.blue,
+                        size: 100.0,
+                        semanticLabel:
+                            'Text to announce in accessibility modes',
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Text(
+                        'Demo_user',
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               SizedBox(
