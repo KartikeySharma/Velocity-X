@@ -6,7 +6,9 @@ class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+     
     return Container(
+    
       child: Scaffold(
         backgroundColor: Color.fromRGBO(36, 36, 36, 1.0),
         appBar: AppBar(
@@ -18,7 +20,8 @@ class Profile extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Color.fromRGBO(36, 36, 36, 1.0),
         ),
-        body: Padding(
+        body: SingleChildScrollView(
+          child: Padding(
           padding: const EdgeInsets.fromLTRB(20, 70, 10, 70),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,15 +29,13 @@ class Profile extends StatelessWidget {
               Container(
                 height: 140.0,
                 width: 340.0,
-              
-              
               ),
-                Icon(
-      Icons.favorite,
-      color: Colors.pink,
-      size: 24.0,
-      semanticLabel: 'Text to announce in accessibility modes',
-    ),
+              Icon(
+                Icons.account_circle_sharp,
+                color: Colors.pink,
+                size: 40.0,
+                semanticLabel: 'Text to announce in accessibility modes',
+              ),
               SizedBox(
                 height: 15,
               ),
@@ -73,6 +74,6 @@ Permission : User1, user2 .''',
           ),
         ),
       ),
-    );
+    ));
   }
 }
