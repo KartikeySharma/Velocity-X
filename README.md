@@ -1,6 +1,11 @@
 # Velocity-X
- 
-## HomePage UI 
+
+Problem Statement Title: Development & Implementation of an integrated web-based Office Document Management System (Department of Empowerment of Persons with Disabilities(Divyangjan), Ministry of Social Justice and Empowerment)
+
+* Cross-Platform App
+* Document Metadata and assign to next person
+* Final Approval
+* Easily Traceable document
 
 *Screenshots*
 
@@ -13,4 +18,3 @@ Mobile UI | Desktop UI
  ![Metadata Page](https://user-images.githubusercontent.com/68814280/159148424-7994f686-3206-415f-b9d7-2eb01b625909.png) | In progress...
 ![Metadata Page+Adduser](https://user-images.githubusercontent.com/68814280/159148432-debdacb7-3960-485a-8f11-62de84954b5d.png) | In progress...
 ![Track_fileinfo](https://user-images.githubusercontent.com/68814280/159148437-eb73f33d-900f-4a0b-ad0f-6baddd2a8c63.png) | In Progress...
-
