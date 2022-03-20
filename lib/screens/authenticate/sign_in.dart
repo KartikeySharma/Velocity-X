@@ -1,11 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:velocityx/services/auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final AuthService _auth = AuthService();
+
     return Scaffold(
         body: Stack(
       children: [
@@ -49,7 +53,8 @@ class SignIn extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/home');
+                  // Navigator.pushNamed(context, '/home');
+                  _auth.signInWithGoogle();
                 },
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(12, 12, 15, 12),

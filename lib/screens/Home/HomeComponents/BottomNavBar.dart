@@ -30,9 +30,16 @@ class _BottomNavBarState extends State<BottomNavBar> {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              iconList[index],
-              size: 24,
+            IconButton(
+              icon: Icon(iconList[index]),
+              onPressed: () {
+                if (index == 0) {
+                  Navigator.pushNamed(context, "/home");
+                }
+              },
+              iconSize: 24,
+              focusColor: color,
+              // size: 24,
               color: color,
             ),
             const SizedBox(height: 4),
