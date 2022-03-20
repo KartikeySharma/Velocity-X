@@ -39,10 +39,11 @@ class Profile extends StatelessWidget {
                       ),
                       SizedBox(
                         height: 15,
+                        width: 100,
                       ),
                       Text(
                         'Demo_user',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: TextStyle(color: Colors.white, fontSize: 20,fontWeight: FontWeight. bold),
                       ),
                     ],
                   ),
