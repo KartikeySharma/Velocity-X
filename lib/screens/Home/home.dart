@@ -63,54 +63,94 @@ class _HomeState extends State<Home> {
                         onPressed: () {}, icon: Icon(CustomIcons.bell))),
               ],
             ),
-            body: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: CategoryTile(
-                        title: 'Urgent Submission',
-                      ),
+            body: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: CategoryTile(
+                            title: 'Urgent Submission',
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: CategoryTile(
+                            title: 'Urgent Submission',
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: CategoryTile(
+                            title: 'Urgent Submission',
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: CategoryTile(
+                            title: 'Urgent Submission',
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: CategoryTile(
+                            title: 'Urgent Submission',
+                          ),
+                        ),
+                      ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: CategoryTile(
-                        title: 'Urgent Submission',
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: CategoryTile(
-                        title: 'Urgent Submission',
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 20.0),
-                Text(
-                  "Today's task",
-                  style: TextStyle(color: Colors.white, fontSize: 24),
-                  textAlign: TextAlign.start,
-                ),
-                Column(
-                  children: [
-                    TaskTile(
-                        task_name: "task_name",
-                        assigned_by: "assigned_by",
-                        due_date: "due_date"),
-                    TaskTile(
-                        task_name: "task_name",
-                        assigned_by: "assigned_by",
-                        due_date: "due_date"),
-                    TaskTile(
-                        task_name: "task_name",
-                        assigned_by: "assigned_by",
-                        due_date: "due_date"),
-                  ],
-                ),
-              ],
+                  ),
+                  SizedBox(height: 20.0),
+                  Text(
+                    "Today's task",
+                    style: TextStyle(color: Colors.white, fontSize: 24),
+                    textAlign: TextAlign.start,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Column(
+                    children: [
+                      TaskTile(
+                          task_name: "task_name",
+                          assigned_by: "assigned_by",
+                          due_date: "due_date"),
+                      TaskTile(
+                          task_name: "task_name",
+                          assigned_by: "assigned_by",
+                          due_date: "due_date"),
+                      TaskTile(
+                          task_name: "task_name",
+                          assigned_by: "assigned_by",
+                          due_date: "due_date"),
+                      TaskTile(
+                          task_name: "task_name",
+                          assigned_by: "assigned_by",
+                          due_date: "due_date"),
+                      TaskTile(
+                          task_name: "task_name",
+                          assigned_by: "assigned_by",
+                          due_date: "due_date"),
+                      TaskTile(
+                          task_name: "task_name",
+                          assigned_by: "assigned_by",
+                          due_date: "due_date"),
+                      TaskTile(
+                          task_name: "task_name",
+                          assigned_by: "assigned_by",
+                          due_date: "due_date"),
+                      TaskTile(
+                          task_name: "task_name",
+                          assigned_by: "assigned_by",
+                          due_date: "due_date"),
+                    ],
+                  ),
+                ],
+              ),
             ),
             floatingActionButton: FloatingActionButton(
               backgroundColor: Color.fromRGBO(71, 132, 241, 1.0),
