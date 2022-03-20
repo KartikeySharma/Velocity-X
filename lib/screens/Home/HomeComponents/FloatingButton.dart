@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:velocityx/screens/Scanner/qr_scan_page.dart';
 
 class FloatingButton extends StatefulWidget {
   bool floatingActive;
@@ -19,7 +20,10 @@ class _FloatingButtonState extends State<FloatingButton> {
       ),
       onPressed: () {
         widget.floatingActive = !widget.floatingActive;
-        Navigator.pushNamed(context, '/Scanner');
+        // Navigator.pushNamed(context, '/Scanner');
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => ScanQRCode()));
+
         setState(() {});
         // _bottomNavIndex = 5;
       },
