@@ -19,6 +19,7 @@ class _FloatingButtonState extends State<FloatingButton> {
       ),
       onPressed: () {
         widget.floatingActive = !widget.floatingActive;
+        Navigator.pushNamed(context, '/Scanner');
         setState(() {});
         // _bottomNavIndex = 5;
       },

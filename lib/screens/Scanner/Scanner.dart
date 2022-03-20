@@ -21,27 +21,26 @@ class _ScannerState extends State<Scanner> {
       child: Scaffold(
         backgroundColor: Color.fromRGBO(36, 36, 36, 1.0),
         appBar: AppBar(
-          backgroundColor: Color.fromRGBO(36,  36, 36, 1.0),
+          backgroundColor: Color.fromRGBO(36, 36, 36, 1.0),
           centerTitle: true,
           title: Text("Scan QR Code"),
           elevation: 0.0,
           actions: <Widget>[
             Container(
-              margin: EdgeInsets.only(right: 15.0),
-              decoration: const BoxDecoration(
-                  color: Color.fromRGBO(36, 36, 36, 1.0),
-                  shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.blue,
-                      blurRadius: 5.0,
-                    ),
-                  ]),
-                child: IconButton(
-                    onPressed: () {}, icon: Icon(CustomIcons.bell))),
+                margin: EdgeInsets.only(right: 15.0),
+                decoration: const BoxDecoration(
+                    color: Color.fromRGBO(36, 36, 36, 1.0),
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.blue,
+                        blurRadius: 5.0,
+                      ),
+                    ]),
+                child:
+                    IconButton(onPressed: () {}, icon: Icon(CustomIcons.bell))),
           ],
-            ),
-
+        ),
         body: Row(
           // mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -59,11 +58,11 @@ class _ScannerState extends State<Scanner> {
                         blurRadius: 5.0,
                       ),
                     ]),
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.supervised_user_circle),
-                    color: Colors.blue,
-              ),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.supervised_user_circle),
+                  color: Colors.blue,
+                ),
               ),
             ),
             Padding(
@@ -100,25 +99,23 @@ class _ScannerState extends State<Scanner> {
                       ),
                     ]),
                 child: IconButton(
-                  onPressed: () {}, 
+                  onPressed: () {},
                   icon: Icon(Icons.notes_sharp),
                   color: Colors.blue,
                 ),
               ),
             ),
-
           ],
         ),
         floatingActionButton: FloatingButton(
           floatingActive: floatingActive,
         ),
-        floatingActionButtonLocation:
-        FloatingActionButtonLocation.centerDocked,
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomNavBar(
           bottomNavIndex: bottomNavIndex,
           floatingActive: floatingActive,
         ),
-        ),
-      );
+      ),
+    );
   }
 }
