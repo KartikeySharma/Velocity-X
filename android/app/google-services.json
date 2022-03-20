@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "798878676840",
+    "project_id": "velocityx-sih",
+    "storage_bucket": "velocityx-sih.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798878676840:android:2a0059a570cd7f7a6908dd",
+        "android_client_info": {
+          "package_name": "com.example.velocityx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798878676840-t6qieetvrpvr9av9inrvcksc7iv8eiv9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.velocityx",
+            "certificate_hash": "9d617042c42ff301be4e72f0a7c48ddfceb87d59"
+          }
+        },
+        {
+          "client_id": "798878676840-se1fad71s0pf12he9gn85r51gla2nqmn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0KVMNlOPZhhxRhiK2vf7QgwQJZOvVsPs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798878676840-se1fad71s0pf12he9gn85r51gla2nqmn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "798878676840-2meu2a9dg302g504je2v8cppk3rojkcb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
